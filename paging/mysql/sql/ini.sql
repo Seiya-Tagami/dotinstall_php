@@ -6,7 +6,7 @@ use paging_php;
 -- commentsテーブル作成
 DROP TABLE IF EXISTS comments;
 CREATE TABLE comments (
-  id NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
   comment VARCHAR(255) NOT NULL,
   created DATETIME,
   modified DATETIME
