@@ -37,7 +37,7 @@ class Poll
       $this->_validateAnswer();
       $this->_save();
       // redirect to result.php
-      header('Location: https://tamoc.com/location-jump/');
+      header('Location: http://' . $_SERVER['HTTP_HOST'] . '/result.php');
       //header('Location: http://' . $_SERVER['HTTP_HOST'] . '/result.php');
     } catch (\Exception $e) {
       //set error
