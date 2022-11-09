@@ -6,11 +6,12 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');
 define('COMMENTS_PER_PAGE', 5);
 
-if (preg_match('/^[1-9][0-9]*$/', $_GET['page'])) {
+if (isset($_GET['page']) && preg_match('/^[1-9][0-9]*$/', $_GET['page'])) { //存在している時かつ、正規表現と検索対象がマッチしているかどうか
   $page = (int)$_GET['page'];
 } else {
   $page = 1;
-}
+};
+
 
 error_reporting(E_ALL & ~E_NOTICE);
 
