@@ -37,8 +37,7 @@ class Poll
       $this->_validateAnswer();
       $this->_save();
       // redirect to result.php
-      header('Location: http://' . $_SERVER['HTTP_HOST'] . '/result.php');
-      //header('Location: http://' . $_SERVER['HTTP_HOST'] . '/result.php');
+      header('Location: http://' . $_SERVER['HTTP_HOST'] .'/result.php');
     } catch (\Exception $e) {
       //set error
       $_SESSION['err'] = $e->getMessage();
@@ -92,7 +91,6 @@ class Poll
     } catch (\PDOException $e) {
       throw new \Exception('No more vote for today');
     }
-    exit;
   }
 
   private function _connectDB()

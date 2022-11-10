@@ -14,5 +14,4 @@ CREATE TABLE answers (
   user_agent VARCHAR(255) NOT NULL,
   answer_date DATE,
   unique unique_answer(remote_addr, user_agent, answer_date)
-  -- uniqueインデックスを設定
-);
+); -- uniqueインデックスを設定
