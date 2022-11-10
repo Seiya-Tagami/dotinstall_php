@@ -4,7 +4,7 @@ CREATE DATABASE poll_php;
 use poll_php;
 
 
--- commentsテーブル作成
+-- テーブル作成
 DROP TABLE IF EXISTS answers;
 CREATE TABLE answers (
   id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
